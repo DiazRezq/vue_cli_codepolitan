@@ -1,26 +1,32 @@
 <template>
   <div id="app" class="container mt-5">
     <h1>Id Shop</h1>
-    <p class="animated fadeInRight">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id neque,
-      voluptates sit repudiandae, nemo magni nesciunt enim, aspernatur cumque
-      rerum totam reprehenderit praesentium. Quia deleniti, quibusdam
-      repudiandae sit non eaque?
-    </p>
-    <FontAwesomeIcon icon="shopping-cart"></FontAwesomeIcon>
-    <Price :value="4.23"></Price>
+    <ProductList :products="products" :maximum="maximum"></ProductList>
   </div>
 </template>
 
 <script>
-import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-import Price from "./components/Price.vue";
+// import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import ProductList from "./components/ProductList.vue";
 
 export default {
   name: "App",
+  data: function () {
+    return {
+      maximum: 20,
+      products: [],
+    };
+  },
   components: {
-    FontAwesomeIcon,
-    Price,
+    // FontAwesomeIcon,
+    ProductList,
+  },
+  mounted: function () {
+    fetch("https://hplussport.com/api/products/order/price")
+      .then((response) => response.json())
+      .then((data) => {
+        this.products = data;
+      });
   },
 };
 </script>
