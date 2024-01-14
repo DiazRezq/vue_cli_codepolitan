@@ -13,7 +13,7 @@
       v-bind:data-index="index"
     >
       <div class="col-1 m-auto">
-        <button class="btn btn-info" v-on:click="$emit('add', item)">+</button>
+        <button class="btn btn-info" @click="$emit('add', item)">+</button>
       </div>
       <div class="col-sm-4">
         <img v-bind:src="item.image" alt="" class="img-fluid d-block" />
@@ -51,13 +51,13 @@ export default {
       el.className = "d-none";
     },
     enter: function (el) {
-      var delay = el.dataset.index * 100;
+      let delay = el.dataset.index * 100;
       setTimeout(function () {
         el.className = "row d-flex mb-3 animated fadeInRight";
       }, delay);
     },
     leave: function (el) {
-      var delay = el.dataset.index * 100;
+      let delay = el.dataset.index * 100;
       setTimeout(function () {
         el.className = "row d-flex mb-3 animated fadeOutLeft";
       }, delay);
