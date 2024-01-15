@@ -22,7 +22,7 @@
           min="0"
           max="100"
           v-model="maxAmount"
-          @imput="$emit('update:maximum', maxAmount)"
+          @input="$emit('update:maximum', maxAmount)"
         />
       </div>
     </div>
