@@ -7,9 +7,10 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faShoppingCart,
   faDollarSign,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faShoppingCart, faDollarSign);
+library.add(faShoppingCart, faDollarSign, faTrash);
 Vue.config.productionTip = false;
 
 new Vue({

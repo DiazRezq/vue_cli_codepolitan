@@ -33,9 +33,12 @@
               <a
                 href="#"
                 class="badge badge-danger text-white"
-                @click.stop="deleteItem(index)"
+                @click.stop="$emit('delete', index)"
               >
-                <i class="fas fa-trash mx-2"></i>
+                <font-awesome-icon
+                  icon="trash"
+                  class="mx-auto"
+                ></font-awesome-icon>
               </a>
             </div>
           </div>
