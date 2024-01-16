@@ -1,12 +1,14 @@
 <template>
   <div id="app" class="container mt-5">
-    <h1>Id Shop</h1>
-    <Navbar
-      :cart="cart"
-      :cartQty="cartQty"
-      :cartTotal="cartTotal"
-      @toggle="toggleSLiderStatus"
-    ></Navbar>
+    <div class="header-container">
+      <h1>Id Shop</h1>
+      <Navbar
+        :cart="cart"
+        :cartQty="cartQty"
+        :cartTotal="cartTotal"
+        @toggle="toggleSLiderStatus"
+      ></Navbar>
+    </div>
     <PriceSlider
       :slider-status="sliderStatus"
       :maximum.sync="maximum"
@@ -18,6 +20,15 @@
     ></ProductList>
   </div>
 </template>
+
+<style>
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+</style>
 
 <script>
 import Navbar from "./components/Navbar.vue";
