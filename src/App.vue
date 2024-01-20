@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container mt-5">
+  <div id="app" class="container">
     <Products
       :cart="cart"
       :cartQty="cartQty"
@@ -24,7 +24,9 @@ export default {
       maximum: 120,
       products: [],
       cart: [],
-      sliderStatus: false,
+      style: {
+        sliderStatus: false,
+      },
     };
   },
   components: {

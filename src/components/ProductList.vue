@@ -10,7 +10,7 @@
       class="row d-none mb-3"
       v-for="(item, index) in ShowItem"
       :key="index"
-      v-bind:data-index="index"
+      :data-index="index"
     >
       <div class="col-1 m-auto">
         <button class="btn btn-info" @click="$emit('add-item', item)">+</button>

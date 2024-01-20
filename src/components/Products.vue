@@ -1,13 +1,15 @@
 <template>
-  <div class="header-container">
-    <h1>Id Shop</h1>
-    <Navbar
-      :cart="cart"
-      :cartQty="cartQty"
-      :cartTotal="cartTotal"
-      @toggle-slide="toggleSlider"
-      @delete-item="deleteItem"
-    ></Navbar>
+  <div class="app-container">
+    <div class="header-container">
+      <h1>Id Shop</h1>
+      <Navbar
+        :cart="cart"
+        :cartQty="cartQty"
+        :cartTotal="cartTotal"
+        @toggle-slide="toggleSlider"
+        @delete-item="deleteItem"
+      ></Navbar>
+    </div>
     <PriceSlider
       :slider-status="sliderStatus"
       :maximum.sync="maximum"
@@ -21,10 +23,15 @@
 </template>
 
 <style>
+.app-container {
+  padding-top: 60px;
+  margin-top: 15px;
+}
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 25px;
 }
 </style>
 

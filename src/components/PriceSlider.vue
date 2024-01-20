@@ -18,11 +18,11 @@
         />
         <input
           type="range"
-          class="custom-range-m"
+          class="custom"
           min="0"
-          max="100"
+          max="200"
           v-model="maxAmount"
-          @input="$emit('update:maximum', maxAmount)"
+          @input="$parent.$emit('update:maximum', maxAmount)"
         />
       </div>
     </div>
