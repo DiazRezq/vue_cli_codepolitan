@@ -9,7 +9,7 @@
     <div
       class="row d-none mb-3"
       v-for="(item, index) in ShowItem"
-      :key="item.id"
+      :key="index"
       v-bind:data-index="index"
     >
       <div class="col-1 m-auto">

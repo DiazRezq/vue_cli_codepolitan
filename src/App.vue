@@ -4,7 +4,7 @@
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
-      :maximum-.sync="maximum"
+      :maximum.sync="maximum"
       :products="products"
       :sliderStatus="sliderStatus"
       @toggle="toggleSLiderStatus"
