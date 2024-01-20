@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-ligth bg-light">
+  <nav class="navbar navbar-light fixed-top">
     <div class="navbar-text ml-auto d-flex">
-      <button class="btn btn-sm btn-outline-success" @click="$emit('toggle-slide')">
+      <button class="btn btn-sm btn-outline-success" @click="$emit('toggle')">
         <font-awesome-icon icon="dollar-sign"></font-awesome-icon>
       </button>
       <div class="dropdown ml-2" v-if="cart.length > 0">
@@ -50,11 +50,11 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import Price from "./Price.vue";
 export default {
   name: "navbar",
+  props: ["cart", "cartQty", "cartTotal"],
   components: {
     FontAwesomeIcon,
     Price,
   },
-  props: ["cart", "cartQty", "cartTotal"],
   filters: {
     currencyFormat: function (value) {
       const formatter = new Intl.NumberFormat("id-ID", {

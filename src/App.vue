@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="container mt-5">
-    <products
+    <Products
       :cart="cart"
       :cartQty="cartQty"
       :cartTotal="cartTotal"
@@ -11,7 +11,7 @@
       @add="AddItem"
       @delete="deleteItem"
     >
-    </products>
+    </Products>
   </div>
 </template>
 

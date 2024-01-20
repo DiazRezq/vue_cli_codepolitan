@@ -5,7 +5,7 @@
     leave-active-class="animated fadeOutLeft"
   >
     <div v-if="sliderStatus">
-      <div class="align-items-center" v-bind:class="sliderState">
+      <div class="align-items-center" :class="sliderState">
         <label for="" class="font-weight-bold mr-2">MAX</label>
         <input
           type="number"
