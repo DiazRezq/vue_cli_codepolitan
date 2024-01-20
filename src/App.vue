@@ -7,7 +7,7 @@
       :maximum.sync="maximum"
       :products="products"
       :sliderStatus="sliderStatus"
-      @toggle="toggleSLiderStatus"
+      @toggle="toggleSliderStatus"
       @add="AddItem"
       @delete="deleteItem"
     >
@@ -24,9 +24,7 @@ export default {
       maximum: 120,
       products: [],
       cart: [],
-      style: {
-        sliderStatus: false,
-      },
+      sliderStatus: false,
     };
   },
   components: {
@@ -57,7 +55,7 @@ export default {
   },
 
   methods: {
-    toggleSLiderStatus: function () {
+    toggleSliderStatus: function () {
       this.sliderStatus = !this.sliderStatus;
     },
     AddItem: function (product) {
@@ -76,11 +74,11 @@ export default {
         this.cart.push({ product: product, qty: 1 });
       }
     },
-    deleteItem: function (key) {
-      if (this.cart[key].qty > 1) {
-        this.cart[key].qty--;
+    deleteItem: function (id) {
+      if (this.cart[id].qty > 1) {
+        this.cart[id].qty--;
       } else {
-        this.cart.splice(key, 1);
+        this.cart.splice(id, 1);
       }
     },
   },

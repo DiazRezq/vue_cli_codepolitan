@@ -1,20 +1,14 @@
 <template>
-  <transition
-    name="custom"
-    enter-active-class="animated fadeInRight"
-    leave-active-class="animated fadeOutLeft"
-  >
+  <transition name="fade">
     <div v-if="sliderStatus">
       <div class="align-items-center" :class="sliderState">
         <label for="" class="font-weight-bold mr-2">MAX</label>
         <input
           type="number"
-          name=""
-          id=""
           class="form-control mx-2"
           style="width: 60px; text-align: center"
           v-model="maxAmount"
-          @change="$emit('update:maximum', maxAmount)"
+          @change="$parent.$emit('update:maximum', maxAmount)"
         />
         <input
           type="range"

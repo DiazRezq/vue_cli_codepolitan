@@ -25,7 +25,7 @@
 <style>
 .app-container {
   padding-top: 60px;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .header-container {
   display: flex;
