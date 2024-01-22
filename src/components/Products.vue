@@ -14,11 +14,7 @@
       :slider-status="sliderStatus"
       :maximum.sync="maximum"
     ></PriceSlider>
-    <ProductList
-      :products="products"
-      :maximum.sync="maximum"
-      @add-item="AddItem"
-    ></ProductList>
+    <ProductList :products="products" :maximum.sync="maximum"></ProductList>
   </div>
 </template>
 
